@@ -21,4 +21,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/add-picture', [AdminController::class, 'add_picture'])->name('add-picture');
     Route::post('/picture/store', [AdminController::class, 'picture_store'])->name('admin.picture_store');
     Route::delete('/picture/{picture}', [AdminController::class, 'destroy_picture'])->name('admin.pictures.destroy');
+
+    Route::get('/show-project', [AdminController::class, 'show_project'])->name('show-project');
+    Route::get('/add-project', [AdminController::class, 'add_project'])->name('add-project');
+    Route::post('/project/store', [AdminController::class, 'project_store'])->name('admin.project_store');
+    Route::delete('/project/{project}', [AdminController::class, 'destroy_project'])->name('admin.projects.destroy');
 });

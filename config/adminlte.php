@@ -340,6 +340,16 @@ return [
             'url' => 'add-picture',
             'icon' => 'fa-solid fa-plus',
         ],
+        [
+            'text' => 'List Project',
+            'url' => 'show-project',
+            'icon' => 'far fa-fw fa-file',
+        ],
+        [
+            'text' => 'Add Project',
+            'url' => 'add-project',
+            'icon' => 'fa-solid fa-plus',
+        ],
     ],
 
     /*

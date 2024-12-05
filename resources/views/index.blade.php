@@ -360,262 +360,27 @@
       <div class="container my-5">
         <h1 class="text-center mb-4">Our Projects</h1>
         <div class="row justify-content-center">
+          @forelse($projects as $project)
           <!-- Portfolio Item -->
           <div class="col-md-4 mb-4 portfolio-item">
             <div class="d-flex flex-column align-items-center text-center">
               <a
-                href="/assets/Project/AEROPOLIS BANDARA SOETTA.jpg"
+                href="{{Storage::url($project->url)}}"
                 class="image-link"
-                title="AEROPOLIS BANDARA SOETTA."
+                title="{{$project->name}}"
               >
                 <img
-                  src="/assets/Project/AEROPOLIS BANDARA SOETTA.jpg"
+                  src="{{Storage::url($project->url)}}"
                   class="img-fluid mb-2"
                   alt="portfolio"
                   style="width: 250px; height: 250px"
                 />
               </a>
-              <p class="mt-2">Aeropolis Bandara Soetta</p>
+              <p class="mt-2">{{$project->name}}</p>
             </div>
           </div>
-
-          <!-- Portfolio Item -->
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/MUTIARA BEKASI.jpg"
-                class="image-link"
-                title="Mutiara Bekasi"
-              >
-                <img
-                  src="/assets/Project/MUTIARA BEKASI.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Mutiara Bekasi</p>
-            </div>
-          </div>
-
-          <!-- Portfolio Item -->
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/MAHATA MARGONDA DEPOK.jpg"
-                class="image-link"
-                title="MAHATA MARGONDA DEPOK."
-              >
-                <img
-                  src="/assets/Project/MAHATA MARGONDA DEPOK.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Mahata Margonda Depok</p>
-            </div>
-          </div>
-
-          <!-- Portfolio Item -->
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/MAHATA TANJUNG BARAT.jpg"
-                class="image-link"
-                title="MAHATA TANJUNG BARAT"
-              >
-                <img
-                  src="/assets/Project/MAHATA TANJUNG BARAT.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Mahata Tanjung Barat</p>
-            </div>
-          </div>
-
-          <!-- Portfolio Item -->
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/ASANA RESIDENCE CIBUBUR.jpg"
-                class="image-link"
-                title="ASANA RESIDENCE CIBUBUR."
-              >
-                <img
-                  src="/assets/Project/ASANA RESIDENCE CIBUBUR.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Asana Residence Cibubur</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/PARAGON SQUARE TANGERANG.jpg"
-                class="image-link"
-                title="PARAGON SQUARE TANGERANG."
-              >
-                <img
-                  src="/assets/Project/PARAGON SQUARE TANGERANG.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Paragon Square Tangerang</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/RAFFLES HILLS CIBUBUR.jpg"
-                class="image-link"
-                title="Raffles Hills Cibubur."
-              >
-                <img
-                  src="/assets/Project/RAFFLES HILLS CIBUBUR.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Raffles Hills Cibubur</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/Rs. Pangkal Pinang 1.jpg"
-                class="image-link"
-                title="RS Pangkal Pinang."
-              >
-                <img
-                  src="/assets/Project/Rs. Pangkal Pinang 1.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">RS Pangkal Pinang</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/Rs. Pangkal Pinang 2.jpg"
-                class="image-link"
-                title="RS Pangkal Pinang."
-              >
-                <img
-                  src="/assets/Project/Rs. Pangkal Pinang 2.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">RS Pangkal Pinang 2</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/SENTRA TIMUR SAPPHIRE TOWER.jpg"
-                class="image-link"
-                title="Sentra Timur Saphire Tower."
-              >
-                <img
-                  src="/assets/Project/SENTRA TIMUR SAPPHIRE TOWER.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Sentra Timur Saphire Tower 2</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/SERPONG JAYA.png"
-                class="image-link"
-                title="Serpong Jaya."
-              >
-                <img
-                  src="/assets/Project/SERPONG JAYA.png"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Serpong Jaya</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/SPRING HILL.jpg"
-                class="image-link"
-                title="Spring Hill."
-              >
-                <img
-                  src="/assets/Project/SPRING HILL.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">Spring Hill</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/THE GREEN COURT CENGKARENG.jpg"
-                class="image-link"
-                title="The Green Court Cengkareng."
-              >
-                <img
-                  src="/assets/Project/THE GREEN COURT CENGKARENG.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">The Green Court Cengkareng</p>
-            </div>
-          </div>
-
-          <div class="col-md-4 mb-4 portfolio-item">
-            <div class="d-flex flex-column align-items-center text-center">
-              <a
-                href="/assets/Project/THE GREEN PRAMUKA RAWASARI.jpg"
-                class="image-link"
-                title="The Green Pramuka Rawasari."
-              >
-                <img
-                  src="/assets/Project/THE GREEN PRAMUKA RAWASARI.jpg"
-                  class="img-fluid mb-2"
-                  alt="portfolio"
-                  style="width: 250px; height: 250px"
-                />
-              </a>
-              <p class="mt-2">The Green Pramuka Rawasari</p>
-            </div>
-          </div>
+          @empty 
+          @endforelse
         </div>
 
         <h1 class="text-center mb-4 mt-5">Our Clients</h1>

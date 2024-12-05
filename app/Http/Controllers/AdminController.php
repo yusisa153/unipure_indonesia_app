@@ -6,6 +6,7 @@ use App\Http\Requests\StoreImageRequest;
 use App\Http\Requests\StorePictureRequest;
 use App\Models\Picture;
 use App\Models\Product;
+use App\Models\Project;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -113,6 +114,52 @@ class AdminController extends Controller
         } catch (\Exception $e) {
             DB::rollBack();
             return redirect()->route('show-product')->with('error', 'terjadi error');
+        }
+    }
+
+    public function show_project()
+    {
+        $projects = Project::all();
+
+        return view('admin.projects.index', compact('projects'));
+    }
+
+    public function add_project()
+    {
+        return view('admin.projects.create');
+    }
+
+
+    public function project_store(StorePictureRequest $request)
+    {
+        DB::transaction(function () use ($request) {
+            $validated = $request->validated();
+
+            if ($request->hasFile('url')) {
+                $urlPath = $request->file('url')->store('projects', 'public');
+                $validated['url'] = $urlPath;
+            } else {
+                $urlPath = 'images/icon-default.png';
+            }
+
+            $project = Project::create($validated);
+        });
+
+        return redirect()->route('show-project');
+    }
+
+    public function destroy_project(Project $project)
+    {
+        DB::beginTransaction();
+
+        try {
+            $project->delete();
+            DB::commit();
+
+            return redirect()->route('show-project');
+        } catch (\Exception $e) {
+            DB::rollBack();
+            return redirect()->route('show-project')->with('error', 'terjadi error');
         }
     }
 }
