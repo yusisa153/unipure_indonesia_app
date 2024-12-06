@@ -22,6 +22,7 @@
             </form>
         </li>
         @empty
+        Tidak Ada Produk
         @endforelse
     </ul>
 </div>

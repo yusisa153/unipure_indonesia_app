@@ -24,6 +24,7 @@
             </form>
         </li>
         @empty
+        Tidak Ada Gambar
         @endforelse
     </ul>
 </div>

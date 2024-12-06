@@ -23,6 +23,7 @@
             </form>
         </li>
         @empty
+        Tidak Ada Projek
         @endforelse
     </ul>
 </div>
