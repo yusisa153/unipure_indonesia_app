@@ -22,7 +22,7 @@
                 <input type="text" class="form-control" id="nama" name="name" placeholder="Masukkan Nama" required>
               </div>
               <div class="form-group">
-                <select name="product_id" id="product_id" required>
+                <select class="form-control" name="product_id" id="product_id" required>
                   <option value="">Pilih Kategori Produk</option>
                   @forelse($products as $product)
                     <option value="{{$product->id}}">{{$product->name}}</option>
