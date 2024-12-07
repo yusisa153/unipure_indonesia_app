@@ -53,9 +53,9 @@
                 <li class="nav-link nav__list-item">
                   <a href="#portfolio" class="hover-target">Portfolio</a>
                 </li>
-                <li class="nav-link nav__list-item">
+                {{-- <li class="nav-link nav__list-item">
                   <a href="{{route('dashboard')}}" class="hover-target">Admin Panel</a>
-                </li>
+                </li> --}}
               </ul>
             </div>
             <div class="col-md-6 text-white">
@@ -571,6 +571,9 @@
                 </li>
                 <li class="menu-item">
                   <a href="#portfolio">portfolios</a>
+                </li>
+                <li class="menu-item">
+                  <a href="{{route('dashboard')}}">Admin Panel</a>
                 </li>
               </ul>
             </div>
