@@ -573,7 +573,7 @@
                   <a href="#portfolio">portfolios</a>
                 </li>
                 <li class="menu-item">
-                  <a href="{{route('dashboard')}}">Admin Panel</a>
+                  <a target="_blank" href="{{route('dashboard')}}">Admin</a>
                 </li>
               </ul>
             </div>
